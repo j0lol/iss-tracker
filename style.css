@@ -3,6 +3,11 @@
 }
 
 :root {
+  --bg: midnightblue;
+  --text: hsl(from var(--bg) calc(h - 10) s 80%);
+  --layer0: hsl(from var(--bg) h s calc(l + 10));
+  --layer0-disabled: hsl(from var(--bg) h s calc(l - 20));
+  --layer0-border: 1px solid hsl(from var(--bg) h s 0);
 }
 
 body {
@@ -21,24 +26,24 @@ body {
 main {
   min-height: 100vh;
   padding: 1em;
-  color: hsl(from midnightblue calc(h - 10) s 80%);
-  background-color: midnightblue;
+  color: var(--text);
+  background-color: var(--bg);
 }
 
 button {
-  border: 1px solid hsl(from midnightblue h s 0);
+  border: var(--layer0-border);
   border-radius: 4px;
-  color: hsl(from midnightblue calc(h - 10) s 80%);
+  color: var(--text);
 
-  background-color: hsl(from midnightblue h s calc(l + 10));
+  background-color: var(--layer0);
 
   &:active {
-    background-color: hsl(from midnightblue calc(h - 10) s 80%);
+    background-color: var(--text);
 
-    color: hsl(from midnightblue h s calc(l + 10));
+    color: var(--layer0);
   }
 
   &:disabled {
-    background-color: hsl(from midnightblue h s calc(l - 20));
+    background-color: var(--layer0-disabled);
   }
 }
