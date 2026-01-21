@@ -9,8 +9,8 @@ L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
 }).addTo(map);
 
 const issIcon = L.icon({
-  iconUrl: "iss.png",
-  shadowUrl: "iss-shadow.png",
+  iconUrl: "assets/iss.png",
+  shadowUrl: "assets/iss-shadow.png",
   iconSize: [64, 25], // size of the icon
   shadowSize: [64, 25], // size of the shadow
   iconAnchor: [22, 94], // point of the icon which will correspond to marker's location
